@@ -2,7 +2,7 @@
 
 using namespace testing;
 
-namespace Gem
+namespace code_test
 {
     TEST(ErrorTest, Constructor)
     {
