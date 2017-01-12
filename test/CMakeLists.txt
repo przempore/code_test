@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.0)
 project(unitTests)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 include(CTest)
 
@@ -32,7 +33,10 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
             "${gmock_SOURCE_DIR}/include")
 endif()
 
-set(SOURCE_FILES testMain.cpp)
-add_executable(unitTests ${SOURCE_FILES})
+file(GLOB test_SRC *.cpp)
+
+include_directories(../source)
+
+add_executable(unitTests ${test_SRC})
 
 target_link_libraries(unitTests gtest gmock_main)
