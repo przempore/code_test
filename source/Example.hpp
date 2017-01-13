@@ -14,12 +14,4 @@ private:
     std::string name;
 };
 
-Example::Example(std::string name) : name(name)
-{}
-
-std::string Example::getName()
-{
-    return name;
-}
-
 #endif //CODE_TEST_TMP_H

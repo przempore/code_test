@@ -39,4 +39,4 @@ include_directories(../source)
 
 add_executable(unitTests ${test_SRC})
 
-target_link_libraries(unitTests gtest gmock_main)
+target_link_libraries(unitTests gtest gmock_main source)
